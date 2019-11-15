@@ -1,0 +1,246 @@
+@import "vars"
+@import "fonts"
+
+// $fontsize = 10px
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+/*Basic settings*/	
+html, body
+	margin: 0
+	padding: 0
+	font-size: 10px
+	
+
+
+body
+	// fz:10px - if you use 1rem
+	// font-size: 16px
+	// font-size: 10px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $font-regular
+	// font-family: $default-font 
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+.hidden-element
+	overflow: hidden
+
+
+/*1 section*/
+
+//Header
+.header-section
+	display: block
+	position: relative
+	left: 10vw
+	width: 80vw
+	
+
+.wrapper-header
+	// outline: 1px solid red
+	position: relative
+	display: flex
+	justify-content: space-between
+	width: 100%
+	height: 13.6rem
+	align-items: center
+	img
+		width: 34.7rem 
+		height: 5.8rem
+		
+.wrapper-contact
+	display: flex
+	justify-content: space-between
+
+.contacts-header
+	span
+		margin-right: 14px
+		display: block
+		color: $gray  
+		&:nth-child(1)
+			font-size: 1.8rem
+			font-weight: bold
+			font-family: $font-semibold
+			line-height: 1.2
+			text-align: right
+		&:nth-child(2)
+			font-size: 1.6rem
+			font-family: $font-regular
+			line-height: 1.7
+.button
+	background-color: $blue
+	border: none
+	width: 199px
+	height: 43px
+	border-radius: 15px
+	font-size: 1.4rem
+	font-family: $font-semibold
+	text-transform: uppercase
+	color: #fff
+	cursor: pointer
+	overflow: hidden
+	position: relative
+	transition: all 0.4s
+	&:hover
+		background-color: $blue-white
+
+
+//Баннер
+
+.wrapper-banner
+	// outline: 1px solid red 
+	position: relative
+	width: 100vw
+	height: 87vh
+
+.bg-img 
+	// width: 100%
+	height: 100%
+	position: relative
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	background-color: $black
+	&::before
+		// content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.5)
+
+
+.social-ico 
+	display: block
+	position: absolute
+	top: 37%
+	left: 1%
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		text-align: center
+		li
+			margin-top: 3rem
+			a
+				display: block
+				// outline: 1px solid red
+				transition: all 0.5s
+				&:hover
+					// padding-left: 10px
+					transform: translateX(1rem)
+			img
+				width: 2.4rem
+				height: auto
+			
+
+.slogan-box 
+	position: absolute
+	top: 28%
+	right: 20%
+	color: #ffffff
+.slogan
+	display: block
+	width: 32rem
+	margin: 3rem
+	cursor: default
+	&::before
+		position: absolute
+		content: ''
+		width: 0.5rem
+		height: 10.9rem
+		background-color: #fff
+		transition: all 0.4s
+	&:nth-child(3)
+		&::before
+			height: 12rem
+	span
+		padding: 0
+		margin: 0
+		margin-left: 3rem
+		&:nth-child(1)
+			font-family: $font-bold
+			font-size: 4.5rem
+			transition: all 0.4s
+			&:hover
+				color: $blue
+		&:nth-child(2)
+			font-family: $font-medium
+			font-size: 2rem
+			display: block
+			margin-top: -7px
+
+.mouse-down 
+	position: absolute
+	top: 90%
+	left: 50%
+	img
+		width: 2rem
+		height: auto
+
+/*1 section END*/
+
+/*2 section */
+.review-section
+	width: 100vw
+	height: 100vh
+	position: relative
+
+.container-content
+	display: flex
+	flex-direction: column
+	align-items: center
+	
+.navigation
+	display: flex
+	align-items: center
+	height: 170px
+	outline: 1px solid red
+	ul
+		list-style-type: none
+		display: block
+		margin: 0
+		padding: 0
+		// height: 120px
+		align-items: center
+		li
+			display: inline-block
+			margin: 25px
+			a
+				text-decoration: none
+				font-size: 18px
+				font-family: $font-semibold
+				color: $black
+
+.heading-section
+
+	
+/*2 section END*/
+
+
+
+@import "media" // Always at the end
