@@ -12,9 +12,101 @@ let sliderFrame = document.getElementsByClassName('client-slide-frame')[0],
 	 slideControl = document.querySelectorAll('.client-slide-control span');
 
 
+//Overlay
+let btnCall = document.querySelectorAll('.request-call'),
+ 	btnOrder = document.querySelectorAll('.make-order'),
+ 	overlay = document.querySelectorAll('.overlay-wrapper'),
+ 	btnCloseOverlay = document.querySelectorAll('.close-overlay'),
+	section = document.querySelectorAll('section');
 
 
-console.log(slideControl);
+
+//Scroll
+
+let linkButton = document.querySelectorAll('.navigation a'),
+	speedLink = 0.8;
+console.log(linkButton);
+linkButton.forEach(function(item, index){
+	linkButton[index].addEventListener('click', function(e){
+		e.preventDefault();
+		var w = window.pageYOffset,  
+     hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
+	    t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id
+			start = null;
+			requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
+			function step(time) {
+					if (start === null) start = time;
+					var progress = time - start,
+							r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/speedLink, w + t));
+					window.scrollTo(0,r);
+					if (r != w + t) {
+							requestAnimationFrame(step)
+					} else {
+							location.hash = hash  // URL с хэшем
+					}
+			}
+	
+	}, false);
+});
+	
+
+//Overlay
+btnOrder.forEach(function(item, index, arr){
+	btnOrder[index].addEventListener('click', function(e){
+		toShowOverlay(0);
+		
+	});
+});
+btnCall.forEach(function (item, index, arr){
+	btnCall[index].addEventListener('click', function(){
+		toShowOverlay(1);
+	});
+});
+
+btnCloseOverlay.forEach(function (item, index, arr) {
+	btnCloseOverlay[index].addEventListener('click', function(e){
+		e.preventDefault();
+		if(index == 0){
+			toCloseOverlay(0);
+		}
+		else if(index == 1){
+			toCloseOverlay(1);
+		}
+	});
+});
+
+overlay.forEach(function(item, index){
+	overlay[index].addEventListener('click', function(e){
+		if(e.target.className == 'form-wrapper'){
+			toCloseOverlay(index);
+		}
+	});
+});
+
+function toShowOverlay(index) {
+	overlay[index].classList.add('overlay-show');
+	document.body.style.overflow = 'hidden';
+	section.forEach(function (item, index) {
+		section[index].style.filter = 'blur(5px)';
+		// console.log(index + ' is fitltered');
+	});
+	console.log('Show overlay');
+}
+function toCloseOverlay(index){
+	overlay[index].classList.remove('overlay-show');
+	document.body.style.overflow = '';
+	section.forEach(function(item, index){
+		section[index].style.filter = '';
+		// console.log(index + ' is fitltered');
+	});
+	console.log('Hide overlay');
+}
+
+//Overlay END
+
+
+
+//Slider Client
 let direction;
 slideControl.forEach(function(item, index,  arr){
 	slideControl[index].addEventListener('click', function(){
@@ -49,8 +141,7 @@ sliderFrame.addEventListener('transitionend', function(e){
 		sliderFrame.style.transition = 'all 0.5s';
 	});
 });
-
-
+//Slider Client END
 
 //Аккордеон - Выпадающий блоки
 let accordion = document.getElementsByClassName('accordion-button-item');
@@ -68,7 +159,9 @@ for(let i = 0; i < accordion.length; i++){
 		}
 	});
 }
+//Аккордеон - Выпадающий блоки END
 
+//Text slider
 sliderFor2Section();
 function sliderFor2Section(){
 	
@@ -103,19 +196,9 @@ function sliderFor2Section(){
 		});
 	});
 }
+//Text slider END
 
 
-// console.log(mapViewport);
-let mapViewport = document.querySelector('.map-gl');
-function showGoogleMap(){
-	let mapProperty = {
-		center:new google.maps.LatLng(51.508742,-0.120850),
- 	 	zoom:5,
-	};
-	
-
-	let map = new google.maps.Map(mapViewport, mapProperty);
-};
 
 
 

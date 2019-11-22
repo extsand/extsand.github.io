@@ -30,6 +30,46 @@
 	<!--[if lt IE 7]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
+
+<!--overlay  -->
+<div class="overlay-wrapper">
+	<div class="form-wrapper">
+		<form class="order">
+			<a href="#" class="close-overlay"><img src="./image/ico/ico-close.png" alt="X"></a>
+			<div class="left-box">
+				<div class="image-box  fadeIn"></div>
+				<div class="slog-box  fadeInLeft "><span>Доставка по всей<br>территории РФ</span></div>
+			</div>
+			<div class="right-box">
+				
+				<input type="text" name="yourName" id="yourName" placeholder="Введите Ваше имя" >
+				<input type="text" name="yourPhone" id="yourPhone" placeholder="Введите Ваш телефон" >
+				<input type="text" name="cityDelivery" id="cityDelivery" placeholder="Город доставки" >
+				<button type="submit" class="button">Заказать</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="overlay-wrapper">
+	<div class="form-wrapper">
+		<form class="form-call">
+			<a href="#" class="close-overlay"><img src="./image/ico/ico-close.png" alt="X"></a>
+			<div class="left-box">
+				<div class="image-box-call fadeIn"></div>
+				<div class="slog-box  fadeInLeft "><span>Задайте свой вопрос<br>квалифицированному специалисту</span></div>
+			</div>
+			<div class="right-box">
+				
+				<input type="text" name="yourName" id="yourName" placeholder="Введите Ваше имя" >
+				<input type="text" name="yourPhone" id="yourPhone" placeholder="Введите Ваш телефон" >
+				<button type="submit" class="button">Отправить</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+
 <!--1 секция  -->
 	<section>
 		<div class="header-section">
@@ -44,7 +84,7 @@
 							<span>teodor.med@yandex.ru</span>
 						</div>
 						<div class="call">
-							<button class='button'>Заказать звонок</button>
+							<button class='button request-call'>Заказать звонок</button>
 						</div>
 					</div>
 				</div>
@@ -56,9 +96,9 @@
 			</div>
 			<div class="social-ico">
 				<ul>
-					<li><a href="#"><img src="./image/ico-vk.png" alt="VK"></a></li>
-					<li><a href="#"><img src="./image/ico-instagram.png" alt="inst"></a></li>
-					<li><a href="#"><img src="./image/ico-facebook-logo.png" alt="fB"></a></li>
+					<li><a href="#"><img src="./image/ico/ico-vk.png" alt="VK"></a></li>
+					<li><a href="#"><img src="./image/ico/ico-instagram.png" alt="inst"></a></li>
+					<li><a href="#"><img src="./image/ico/ico-facebook.png" alt="fB"></a></li>
 				</ul>
 			</div>
 
@@ -78,7 +118,7 @@
 			</div>
 
 			<div class="mouse-down animated heartBeat slow infinite">
-				<a href="#"><img src="./image/ico-scroll_down.png" alt="\/"></a>
+				<a href="#"><img src="./image/ico/ico-scroll_down.png" alt="\/"></a>
 			</div>
 
 		</div>
@@ -90,14 +130,14 @@
 			<div class="container-content">
 				<nav class="navigation">
 					<ul>
-						<li><a href="#">О препарате</a></li>
-						<li><a href="#">Отзывы</a></li>
-						<li><a href="#">Доставка</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="#aboutS">О препарате</a></li>
+						<li><a href="#feedbackS">Отзывы</a></li>
+						<li><a href="#deliveryS">Доставка</a></li>
+						<li><a href="#mapClientS">Контакты</a></li>
 					</ul>
 				</nav>
 				<div class="call">
-					<button class='button'>Заказать</button>
+					<button class='button make-order'>Заказать</button>
 				</div>
 				<div class="heading-section">
 					<h2>Элластин Кальций</h2>
@@ -147,7 +187,7 @@
 					</div>
 				</div>
 				<div class="call">
-					<button class='button question'>Задать вопрос</button>
+					<button class='button question request-call'>Задать вопрос</button>
 				</div>
 			</div>
 			<div class="slide-viewport">
@@ -163,7 +203,7 @@
 	</section>
 
 <!--3 секция  -->
-	<section>
+	<section id="feedbackS">
 		<div class="client-feedback">
 			<div class="client-container">
 
@@ -244,14 +284,14 @@
 					</div>
 				</div>
 				<div class="call">
-					<button class='button'>Заказать</button>
+					<button class='button make-order'>Заказать</button>
 				</div>
 			</div>
 		</div>
 	</section>
 
 <!--4 секция  -->
-	<section>
+	<section id="aboutS">
 		<div class="about-product">
 			<div class="wrapper-about-product">
 				<div class="heading-section">
@@ -338,7 +378,7 @@
 					</div>
 				</div>
 				<div class="call">
-					<button class='button'>Заказать</button>
+					<button class='button make-order'>Заказать</button>
 				</div>
 				
 			</div>
@@ -346,7 +386,7 @@
 	</section>
 
 <!--5 секция  -->
-	<section>
+	<section id="mapClientS">
 		<div class="map-for-client">
 			<div class="map-for-client-wrapper">
 				<div class="heading-section">
@@ -365,20 +405,87 @@
 	</section>
 
 	<!--6 секция  -->
+	<section id="deliveryS">
+		<div class="product-delivery">
+			<div class="product-delivery-wrapper">
+				<div class="heading-section">
+					<h2>Доставка товара</h2>
+					<h5>Мы доставляем по всей территории<br>
+						Российской Федерации</h5>
+				</div>
+				<div class="product-delivery-description">
+					<p>
+						<span class="head-span">Курьерская доставка</span>
+						<br>
+						В пределах Санкт-Петербурга, курьерская доставка осуществляется <b>БЕСПЛАТНО</b>, при заказе 2-х и более упаковок.
+						Стоимость доставки 1 упаковки – <b>300 рублей</b>.
+					</p>
+					<br>
+					<p>
+						По Ленинградской области доставка осуществляется почтой России бесплатно, при заказе 2-ч и более упаковок.
+						Стоимость доставки 1 упаковки рассчитывается почтой России и оплачивается при получении товара.
+					</p>	
+					<br>
+					<p>
+						По территории Российской Федерации доставка осуществляется почтой России бесплатно, при заказе более 2-ч и
+						более упаковок.
+					</p>
+					<p>
+						Стоимость доставки 1 упаковки рассчитывается почтой России и оплачивается при получении товара.
+					</p>
+					<br>
+					<p>
+						В страны ЕАЭС доставка осуществляется транспортной компанией СДЭК. При заказе 2-ч и более упаковок –
+						бесплатно. Стоимость доставки 1 упаковки рассчитывается по тарифам транспортной компании и оплачивается клиентом при
+						получении.
+					</p>
+					<p>
+						<span class="head-span">Оплата</span>
+						<br>
+						При заказе товара осуществляется предоплата в размере 100%.
+						<br>
+						<b><i>При доставке по Санкт-Петербургу оплата может осуществляться при получении товара.</i></b>
+					</p>
+				</div>
+				<div class="call">
+					<button class='button make-order'>Заказать</button>
+				</div>
+
+			</div>
+	</section>
+	<!-- Footer -->
 	<section>
-			<div class="product-delivery">
-				<div class="product-delivery-wrapper">
-					<div class="heading-section">
-						<h2>Доставка товара</h2>
-						<h5>Мы доставляем по всей территории<br> 
-								Российской Федерации</h5>
+		<footer>
+			<div class="footer-section">
+				<div class="footer-wrapper">
+					<div class="footer-contacts">
+						<div class="footer-logo">
+							<a href="index.html"><img src="./image/logo.png" alt="Ellastin"></a>
+						</div>
+						<div class="footer-phone">
+							<span><a href="mailto:teodor.med@yandex.ru">teodor.med@yandex.ru</a></span>
+							<span>Отдел продаж: <a href="tel:+(812) 602-70-02">(812) 602-70-02</a></span>
+							<span>По вопросам сотрудничества: <a href="tel:+(812) 602-70-02">(812) 602-70-02</a></span>
+						</div>
 					</div>
-					
-	
+					<div class="footet-social">
+						<a href="#" target="_blank"><img src="./image/ico/ico-vk-blue.png" alt="VK"></a>
+						<a href="#" target="_blank"><img src="./image/ico/ico-instagram-blue.png" alt="inst"></a>
+						<a href="#" target="_blank"><img src="./image/ico/ico-facebook-blue.png" alt="fb"></a>
+					</div>
+					<div class="footer-reg-info">
+						<span>
+								Зарегистрирован на территории стран Таможенного Союза как БАД. 
+								Свид.о гос.регистрации RU.77.99.32.003.Е.007920.07.15 от 22.07.2015. 
+								Не является лекарством.
+						</span>
+					</div>
+
 				</div>
 			</div>
-		</section>
+		</footer>
 
+	</section>
 
 	<!-- Developer Features -->
 	<div class="display-widtn">
@@ -424,221 +531,15 @@
 	<script src="./lib/jQuery/jQuery3.3.1.min.js"></script>
 	<!-- CustomScript -->
 	<script src="./js/main.js"></script>
+
+
 	<!-- GoogleMap -->
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC00-yEy3-oWt--YP7piA3zjTosRxDT9Kc&callback=showGoogleMap"></script> -->
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=AIzaSyDr-ELUwv-GQpwD_LN5VLtEU5Ba0uXMRyA"></script>
+	<script src="./js/gmap.js"></script>
     
-	<script>
-			var map;
-			function initialize() {
-				var mapOptions = {
-					scrollwheel: true,
-					zoom: 7,
-					center: new google.maps.LatLng(59.9379728,30.3351805)
-				};
-				map = new google.maps.Map(document.querySelector('.map-gl'), mapOptions);
-				var place2 = new google.maps.LatLng(59.9256814,30.3114381);
-					var marker2 = new google.maps.Marker({
-						map: map,
-						position: place2,
-						icon : 'image/map-pointer.png'
-					});
-					var infowindow2 = new google.maps.InfoWindow();
-					infowindow2.setContent('<p>Санкт-Петербург: наб. кан. Грибоедова, дом 72</p>  <p>Ст. метро "Сенная площадь"</p>  <p>тел. (812) 314-15-28, 314-10-27</p>');
-					//infowindow2.open(map, marker2);
-					google.maps.event.addListener(marker2, 'click', function() {
-						infowindow2.open(map,marker2);
-					});
-					google.maps.event.addListener(marker2, 'mouseover', function() {
-						infowindow2.open(map,marker2);
-					});
-					google.maps.event.addListener(marker2, 'mouseout', function() {
-						infowindow2.close();
-					});
-					
-					
-					var place113 = new google.maps.LatLng(59.7610838, 30.780546);
-					var marker113 = new google.maps.Marker({
-						map: map,
-						position: place113,
-						icon : 'image/map-pointer.png'
-					});
-					var infowindow113 = new google.maps.InfoWindow();
-					infowindow113.setContent('<p>ул. Адрес: ул. Ленина, 18, Отрадное, Ленинградская обл., 187330</p> <p>тел. 8 (813) 624-03-52</p>');
-					//infowindow3.open(map, marker3);
-					google.maps.event.addListener(marker113, 'click', function() {
-						infowindow113.open(map,marker113);
-					});
-					google.maps.event.addListener(marker113, 'mouseover', function() {
-						infowindow113.open(map,marker113);
-					});
-					google.maps.event.addListener(marker113, 'mouseout', function() {
-						infowindow113.close();
-					});
-					
-					var place13 = new google.maps.LatLng(59.768927, 30.798207);
-					var marker13 = new google.maps.Marker({
-						map: map,
-						position: place13,
-						icon : 'image/map-pointer.png'
-					});
-					
-					var infowindow13 = new google.maps.InfoWindow();
-					infowindow13.setContent('<p>ул. Щурова, 3-в, Отрадное, Ленинградская обл., 187330 </p> <p>тел. 8 (950) 035-16-42</p>');
-					//infowindow9.open(map, marker9);
-					google.maps.event.addListener(marker13, 'click', function() {
-						infowindow13.open(map,marker13);
-					});
-					google.maps.event.addListener(marker13, 'mouseover', function() {
-						infowindow13.open(map,marker13);
-					});
-					google.maps.event.addListener(marker13, 'mouseout', function() {
-						infowindow13.close();
-					});	
-					
-					
-					var place3 = new google.maps.LatLng(59.874251,30.386455);
-					var marker3 = new google.maps.Marker({
-						map: map,
-						position: place3,
-						icon : 'image/map-pointer.png'
-					});
-					var infowindow3 = new google.maps.InfoWindow();
-					infowindow3.setContent('<p>Санкт-Петербург: Улица Белы Куна, 20а, дом 1</p>  <p>Ст. метро "Международная"</p>  <p>тел. 8 (962) 713-51-44</p>');
-					//infowindow3.open(map, marker3);
-					google.maps.event.addListener(marker3, 'click', function() {
-						infowindow3.open(map,marker3);
-					});
-					google.maps.event.addListener(marker3, 'mouseover', function() {
-						infowindow3.open(map,marker3);
-					});
-					google.maps.event.addListener(marker3, 'mouseout', function() {
-						infowindow3.close();
-					});
-					
-					var place4 = new google.maps.LatLng(60.0561235,30.3212961);
-					var marker4 = new google.maps.Marker({
-						map: map,
-						position: place4,
-						icon : 'image/map-pointer.png'
-					});
-					var infowindow4 = new google.maps.InfoWindow();
-					infowindow4.setContent('<p>Санкт-Петербург: просппект Просвещения дом 24</p>  <p>Ст. метро "Проспект Просвещения"</p>  <p>тел. (812) 497-66-55</p>');
-					//infowindow4.open(map, marker4);
-					google.maps.event.addListener(marker4, 'click', function() {
-						infowindow4.open(map,marker4);
-					});
-					google.maps.event.addListener(marker4, 'mouseover', function() {
-						infowindow4.open(map,marker4);
-					});
-					google.maps.event.addListener(marker4, 'mouseout', function() {
-						infowindow4.close();
-					});
-					
-					var place5 = new google.maps.LatLng(59.9314522,30.3161322);
-					var marker5 = new google.maps.Marker({
-						map: map,
-						position: place5,
-						icon : 'image/map-pointer.png'
-					});
-					var infowindow5 = new google.maps.InfoWindow();
-					infowindow5.setContent('<p>Санкт-Петербург: улица Гороховая, 19</p>  <p>Ст. метро "Сенная площадь", "Адмиралтейская"</p>  <p>тел. (812) 315-72-76</p>');
-					//infowindow5.open(map, marker5);
-					google.maps.event.addListener(marker5, 'click', function() {
-						infowindow5.open(map,marker5);
-					});
-					google.maps.event.addListener(marker5, 'mouseover', function() {
-						infowindow5.open(map,marker5);
-					});
-					google.maps.event.addListener(marker5, 'mouseout', function() {
-						infowindow5.close();
-					});
-					
-					var place7 = new google.maps.LatLng(59.5417993, 30.8791986);
-					var marker7 = new google.maps.Marker({
-						map: map,
-						position: place7,
-						icon : 'image/map-pointer.png'
-					});
-					var infowindow7 = new google.maps.InfoWindow();
-					infowindow7.setContent('<p>Ленинградская область, г. Тосно</p>  <p>ул. Советская 11</p>  <p>тел. 8 (81361) 2-53-79</p>');
-					//infowindow7.open(map, marker7);
-					google.maps.event.addListener(marker7, 'click', function() {
-						infowindow7.open(map,marker7);
-					});
-					google.maps.event.addListener(marker7, 'mouseover', function() {
-						infowindow7.open(map,marker7);
-					});
-					google.maps.event.addListener(marker7, 'mouseout', function() {
-						infowindow7.close();
-					});
-					
-					var place8 = new google.maps.LatLng(59.537612, 30.885912);
-					var marker8 = new google.maps.Marker({
-						map: map,
-						position: place8,
-						icon : 'image/map-pointer.png'
-					});
-					var infowindow8 = new google.maps.InfoWindow();
-					infowindow8.setContent('<p>Ленинградская область, г. Тосно</p>  <p>пр. Ленина 62 к 2</p>  <p>тел. 8 (81361) 2-68-18</p>');
-					//infowindow8.open(map, marker8);
-					google.maps.event.addListener(marker8, 'click', function() {
-						infowindow8.open(map,marker8);
-					});
-					google.maps.event.addListener(marker8, 'mouseover', function() {
-						infowindow8.open(map,marker8);
-					});
-					google.maps.event.addListener(marker8, 'mouseout', function() {
-						infowindow8.close();
-					});
-					
-					var place9 = new google.maps.LatLng(59.545316, 30.867793);
-					var marker9 = new google.maps.Marker({
-						map: map,
-						position: place9,
-						icon : 'image/map-pointer.png'
-					});
-					
-					var infowindow9 = new google.maps.InfoWindow();
-					infowindow9.setContent('<p>Ленинградская область, г. Тосно</p>  <p>пр. Ленина 27</p>  <p>тел. 8 (81361) 2-92-75</p>');
-					//infowindow9.open(map, marker9);
-					google.maps.event.addListener(marker9, 'click', function() {
-						infowindow9.open(map,marker9);
-					});
-					google.maps.event.addListener(marker9, 'mouseover', function() {
-						infowindow9.open(map,marker9);
-					});
-					google.maps.event.addListener(marker9, 'mouseout', function() {
-						infowindow9.close();
-					});
-					
-					//new
-					
-					var place10 = new google.maps.LatLng(59.980961, 30.406571);
-					var marker10 = new google.maps.Marker({
-						map: map,
-						position: place10,
-						icon : 'image/map-pointer.png'
-					});
-					
-					var infowindow10 = new google.maps.InfoWindow();
-					infowindow10.setContent('<p>Санкт-Петербург: ул. Герасимовская, 15 лит А пом 3Н</p>  <p>Ст. метро "Площадь Мужества"</p><p>Аптека «НеоВита»</p>');
-					//infowindow9.open(map, marker9);
-					google.maps.event.addListener(marker10, 'click', function() {
-						infowindow10.open(map,marker10);
-					});
-					google.maps.event.addListener(marker10, 'mouseover', function() {
-						infowindow10.open(map,marker10);
-					});
-					google.maps.event.addListener(marker10, 'mouseout', function() {
-						infowindow10.close();
-					});	
-			
-			}
-			google.maps.event.addDomListener(window, 'load', initialize);									   
-
-</script>
-	<script src="" async defer></script>
+	
+	<!-- <script src="" async defer></script> -->
 </body>
 
 </html>

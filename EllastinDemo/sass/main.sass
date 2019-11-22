@@ -53,10 +53,12 @@ a
 
 .hidden-element
 	overflow: hidden
+	display: none
 
 
 /*1 section*/
-
+#aboutS
+	scroll-behavior: smooth
 //Header
 .header-section
 	display: block
@@ -389,6 +391,10 @@ a
 		// outline: 1px solid blue
 		display: block
 		height: 20rem
+		width: 4rem
+		&:hover
+			transition: all 0.4s
+			font-size: 4rem
 
 
 .client-slider-container
@@ -513,18 +519,229 @@ a
 .map-for-client
 	width: 100vw
 	height: auto
+	margin-bottom: 5rem
 .map-for-client-wrapper
 	display: flex
 	flex-direction: column
 	align-items: center
 .map-gl
-	outline: 1px solid blue
 	display: block
 	width: 117rem
 	height: 60rem
 	
 /*5 section END*/
 
+/*6 section*/
+.product-delivery
+	width: 100vw
+	height: auto
+	display: block
+	background-color: #f3f3f3
+	margin-bottom: 5rem
+	padding-bottom: 5rem
+.product-delivery-wrapper
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.product-delivery-description
+	width: 60vw
+	margin-bottom: 5rem
+	p
+		font-family: $font-medium
+		font-size: 1.8rem
+.head-span
+	font-size: 2rem
+	font-family: $font-bold
+
+/*6 section END*/
+
+/*footer section*/
+
+.footer-section
+	width: 100vw
+	height: 35rem
+	display: block
+	background-color: #ffffff
+.footer-wrapper
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: 100%
+	align-items: center
+	justify-content: center
+.footer-contacts
+	display: flex
+	width: 80vw
+	justify-content: space-between
+.footer-logo
+.footer-phone
+	span
+		font-size: 1.5rem
+		display: block
+		text-align: right
+		font-family: $font-medium
+		color: $gray
+.footet-social
+	margin: 3rem
+	a
+		margin: 0 1.5rem
+	img
+		width: 3rem
+		height: auto
+.footer-reg-info
+	display: block
+	width: 40rem
+	font-size: 10px
+	color: $gray
+	text-align: center
+/*footer section END*/
+
+
+/*overlay ORDER*/
+.overlay-wrapper
+	// outline: 3px solid blue
+	width: 100%
+	height: 100%
+	display: none
+	position: fixed
+	top: 0
+	overflow: hidden
+	background-color: rgba(#fafafa, 0.7)
+	z-index: 1
+	
+
+.overlay-show
+	display: block
+	
+	
+.form-wrapper
+	width: 100vw
+	height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+	z-index: 2
+	
+.order, .form-call
+	animation: fadeIn 1.3s
+	// outline: 1px solid $blue
+	box-shadow: 0 0 2rem rgba(0,0,0,0.5)
+	overflow: hidden
+	width: 100rem	
+	height: 70rem
+	background-color: #fff
+	display: flex
+	justify-content: space-between
+	position: relative
+	top: 3rem
+	a
+		// outline: 1px solid black
+		display: block
+		width: 4rem
+		height: 4rem
+		position: absolute
+		right: 2rem
+		top: 2rem
+		transition: ease-in 0.5s
+		&:hover
+			transition: ease-in 0.5s
+			transform: rotate(180deg)
+		img
+			width: 100%
+			height: 100%
+
+
+.left-box
+	width: 50%
+	height: 100%
+	// outline: 1px solid blue
+	display: flex
+	flex-direction: column
+	// align-items: flex-start
+	
+
+.image-box
+	width: 100%
+	height: 70%
+	background-image: url(/image/form/order.png)
+	background-position: -100px -230px
+	background-repeat: no-repeat
+	// background-size: c
+	// background-position: cover
+	// position: relative
+
+.image-box-call
+	width: 100%
+	height: 70%
+	background-image: url(/image/form/call.png)
+	background-position: -120px 0
+	background-repeat: no-repeat
+	// background-size: c
+	// background-position: cover
+	// position: relative
+.slog-box
+	width: 100%
+	height: 30%
+	// outline: 1px solid green
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: #f2f2f2
+	span
+		display: block
+		color: $gray
+		font-family: $font-bold
+		font-size: 3rem
+		margin-left: 4rem
+		
+.right-box
+	width: 50%
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	input
+		border: 1px solid $blue
+		width: 199px
+		height: 43px
+		margin: 1rem
+		font-size: 1.5rem
+		text-align: center
+		color: $gray
+		// opacity: 1
+		text-overflow:ellipsis
+		// transition: all 0.8s
+		&::placeholder
+			color: $blue
+			opacity: 0.7
+			font-family: $font-regular
+			font-size: 1.3rem
+		&:focus
+			// opacity: 
+			// color: $blue
+			border: 2px solid $blue
+			transition: opacity 0.6s ease
+			&::placeholder
+				// color: $blue
+				opacity: 0
+				transition: opacity 0.6s ease
+		
+
+	.button	
+		margin-top: 1rem
+		
+
+/*overlay ORDER END*/
+
+/*Animation Keyframe*/
+
+@keyframes fadeIn 
+  0% 
+		opacity: 0
+  100% 
+		opacity: 1 
 
 
 @import "media" // Always at the end
