@@ -171,25 +171,26 @@ a
 			
 
 .slogan-box 
+	width: 70rem
 	position: absolute
-	top: 28%
-	right: 20%
+	top: 10%
+	right: 3%
 	color: #ffffff
 .slogan
 	display: block
-	width: 32rem
+	// width: 32rem
 	margin: 3rem
 	cursor: default
 	&::before
 		position: absolute
 		content: ''
 		width: 0.5rem
-		height: 10.9rem
+		height: 12.2rem
 		background-color: #fff
 		transition: all 0.4s
 	&:nth-child(3)
 		&::before
-			height: 12rem
+			height: 15.5rem
 	span
 		padding: 0
 		margin: 0
@@ -277,6 +278,7 @@ a
 	align-items: center
 	justify-content: space-between
 	width: 86rem
+	height: 30rem
 	position: relative
 	// overflow: hidden
 
@@ -298,7 +300,7 @@ a
 	width: 42rem
 	height: auto
 	font-family: $font-medium
-	font-size: 1.5rem
+	font-size: 1.6rem
 	transition: all 2s
 	
 .info-desctiption
@@ -307,7 +309,7 @@ a
 	font-size: 1.8rem
 	position: relative
 	width: 40rem
-	height: 20rem
+	height: auto
 	ul
 		list-style-type: none
 		margin: 0
@@ -336,11 +338,12 @@ a
 
 
 .slide-viewport
+	outline: 1px solid red
 	display: block
 	overflow: hidden
 	position: absolute
 	top: 10%
-	width: 40rem	
+	width: 25rem	
 	height: 80rem
 	// transform: translateX(-10px)
 	// background-color: $blue
@@ -356,10 +359,23 @@ a
 		width: 70vw
 		transform: translateX(-500px)
 
+.text-frame
+	width: 80rem
+	font-size: 1.5rem
 
 	
 /*2 section END*/
-
+.to-top
+	// display: none
+	width: 3rem
+	height: 3rem
+.to-top-action
+	z-index: 1
+	position: fixed
+	right: 10rem
+	bottom: 10rem
+	
+	
 /*3 section*/
 .client-feedback
 	width: 100vw
@@ -500,6 +516,23 @@ a
 	background-color: transparent
 	border: none
 	cursor: pointer
+	&::after
+		content: ' +'
+		// display: block
+		// position: relative
+		// width: 2rem
+		// height: 1rem
+		// background-color: red
+	
+.accordion-button-item-active
+	&::after
+		content: ' -'
+.afterfix
+	&::after
+		content: ' -'
+
+
+		
 
 .panel-item
 	font-family: $font-medium
@@ -608,7 +641,7 @@ a
 	top: 0
 	overflow: hidden
 	background-color: rgba(#fafafa, 0.7)
-	z-index: 1
+	z-index: 2
 	
 
 .overlay-show
@@ -731,7 +764,32 @@ a
 
 	.button	
 		margin-top: 1rem
-		
+
+
+.message-for-form
+	opacity: 0
+	width: 100vw
+	height: 100vh
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	background-color: rgba(255,255,255, 0.9)
+	position: fixed
+	z-index: -3
+	top: 0
+	left: 0
+	h3
+		font-family: $font-bold
+		font-size: 5rem
+		color: $blue
+	h5
+		font-family: $font-medium
+		font-size: 4rem
+
+.message-for-form-action
+	opacity: 1
+	z-index: 3
 
 /*overlay ORDER END*/
 

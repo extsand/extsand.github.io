@@ -102,7 +102,14 @@ function initialize() {
 		longtitude: 30.406571,
 	};
 	// console.log(gerasimovskaya);
-
+	// let gerasimovskaya3 = {
+	// 	city: '<b>ТЕСТОВАЯ ТОЧКА</b><br>',
+	// 	street: 'ул. Герасимовская, 15 лит. А пом. 3Н<br>',
+	// 	metro: 'Ст. метро "Площадь Мужества"<br>Аптека «НеоВита»<br>',
+	// 	phone: '',
+	// 	latitude: 59.880961,
+	// 	longtitude: 30.506571,
+	// };
 function toCreatePoint(objPlace, mapView){
 	let place = new google.maps.LatLng(objPlace.latitude, objPlace.longtitude);
 	// let place = new google.maps.LatLng(0,0);
@@ -133,6 +140,8 @@ function toCreatePoint(objPlace, mapView){
 
 // console.log(magdeburg);
 // toCreatePoint(magdeburg, map);
+// toCreatePoint(gerasimovskaya3, mapView);
+
 toCreatePoint(griboedova, mapView);
 toCreatePoint(otradnoe1, mapView);
 toCreatePoint(otradnoe2, mapView);

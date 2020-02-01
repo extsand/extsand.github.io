@@ -21,9 +21,41 @@ let btnCall = document.querySelectorAll('.request-call'),
 
 
 
-//Scroll
 
-let linkButton = document.querySelectorAll('.navigation a'),
+// Scroll to top
+
+let toTopButton = document.querySelector('.to-top a'),
+		sizeFirstSection = 1000;
+		// toTopButton.style.top = sizeFirstSection + 'px';
+console.log(toTopButton);
+
+
+function toScrollToTop(){
+	if((document.body.scrollTop > sizeFirstSection) || (document.documentElement.scrollTop > sizeFirstSection)){
+		// toTopButton.style.display = 'block';
+		// toTopButton.style.opacity = '1';
+		// console.log(toTopButton.style.display);
+		// toTopButton.classList.add('to-top-action');
+		toTopButton.classList.add('to-top-action');
+	} else {
+		// toTopButton.style.display = 'none';
+		// toTopButton.style.opacity = '0';
+		toTopButton.classList.remove('to-top-action');
+	}
+}
+window.onscroll = function(){
+	this.toScrollToTop();
+}
+
+// document.addEventListener('DOMContentLoaded', function(){
+// 	toScrollToTop();
+// })
+
+// document.add
+
+//Scroll to ID
+
+let linkButton = document.querySelectorAll('.mouse-down a, .navigation a'),
 	speedLink = 0.8;
 console.log(linkButton);
 linkButton.forEach(function(item, index){
@@ -145,11 +177,17 @@ sliderFrame.addEventListener('transitionend', function(e){
 
 //Аккордеон - Выпадающий блоки
 let accordion = document.getElementsByClassName('accordion-button-item');
+
 for(let i = 0; i < accordion.length; i++){
-	accordion[i].addEventListener('click', function(){
+	accordion[i].addEventListener('click', function(e){
+		
+		if(accordion[i].classList.contains('afterfix')){
+			accordion[i].classList.remove('afterfix');
+		}
+		e.target.classList.toggle('accordion-button-item-active');
 		// this.classList.toggle('active');
 		console.log('panell');
-
+		
 		let panel = this.nextElementSibling;
 		if(panel.style.display === 'block'){
 			panel.style.display = 'none';
@@ -197,6 +235,8 @@ function sliderFor2Section(){
 	});
 }
 //Text slider END
+
+
 
 
 
