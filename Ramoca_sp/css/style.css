@@ -214,7 +214,7 @@ html, body {
     -webkit-box-shadow: 0 0 4rem rgba(255, 70, 70, 0.4);
             box-shadow: 0 0 4rem rgba(255, 70, 70, 0.4); } }
 
-@media screen and (max-width: 1349px) {
+@media screen and (max-width: 1000px) {
   html, body {
     font-size: 6.25px; }
   .container {
