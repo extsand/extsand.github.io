@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 html, body {
   background-color: #dce0e8;
-  font-size: 10px;
+  font-size: 7px;
   font-family: 'Open Sans', sans-serif; }
   html ::-moz-selection, body ::-moz-selection {
     color: #ff4646; }
