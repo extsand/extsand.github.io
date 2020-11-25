@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+
+$fontSizeControl: 10px	
+$transition: all 0.6s
+$button_color: #ff4646
+$rhythm: 4rem
+	
+html, body 
+	background-color: #dce0e8	
+	font-size: $fontSizeControl
+	font-family: 'Open Sans', sans-serif
+	::selection
+		// background: red
+		color: $button_color
+		// color: radial-gradient(circle, rgba(255,70,70,0.8) 1%, rgba(255,255,255,1) 15%)
+
+
+.wrapper
+	width: 100%
+	min-height: 90vh 
+	display: flex
+	justify-content: center
+	align-items: center
+
+.container
+	width: 140rem
+	height: 94rem
+	background: #ffffff
+	border-radius: 2rem
+	font-size: 2rem
+	box-shadow: 0rem 2rem 100px rgba(0,0,0, 0.5)
+
+	display: flex
+	flex-direction: row
+	overflow: hidden
+
+.gradient-glow
+	// background: radial-gradient(circle, rgba(255,70,70,0.8) 1%, rgba(255,255,255,1) 15%)
+	// display: block
+	// width: 100rem
+	// height: 100rem
+	// position: absolute
+	// transform: tra
+	
+.left-box
+	// background-color: rgba($button_color , 0.2)
+	
+	// background: linear-gradient(90deg, rgba(255,70,70,1) 0%, rgba(255,255,255,1) 25%)
+	flex: 1
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	width: 100%
+	nav
+		width: 45rem
+		ul
+			list-style-type: none
+			padding-left: 0
+
+			display: flex
+			justify-content: space-between
+			align-items: flex-end
+			li
+				a
+					text-decoration: none
+					color: #000000
+					font-weight: 600
+					transition: $transition
+					&:hover
+						color: $button_color
+
+		
+
+.name-of	
+	margin-top: $rhythm*3
+	width: 45rem				
+	h2
+		font-size: 10rem
+		padding: 0
+		margin: 0	
+		line-height: 1
+		font-weight: 500
+		&:first-of-type
+			// font-size: 2rem
+			font-weight: 900
+	p	
+		font-size: 2.5rem
+		letter-spacing: 0.5px
+			
+
+.social-link
+	margin-top: $rhythm
+	width: 44rem
+	// outline: 1px solid red
+	
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		display: flex
+		align-items: center
+		li
+			flex: 1
+			text-align: right
+			&:first-of-type
+				flex: 1 1 2rem
+				display: flex
+				height: 5rem
+				a
+					color: #ffffff
+					background-color: $button_color
+					width: 100%
+					height: 5rem
+					text-align: center
+					line-height: 2.6
+					font-size: 1.8rem
+					letter-spacing: 1px
+					font-weight: 600
+					border-radius: 3rem
+					box-shadow: 0 0 4rem rgba($button_color, 0.7)
+					transition: $transition
+					&:hover
+						animation: buttonPulse 1.3s ease-in-out infinite
+						// box-shadow: 0 0 4rem rgba($button_color, 1)
+						color: #ffffff
+
+
+			a
+				text-decoration: none
+				color: #000000
+				font-size: 3.3rem
+				transition: $transition
+				&:hover
+					color: rgba($button_color, 1)
+				
+.sponsors
+	margin-top: $rhythm
+	width: 44rem
+	ul
+		// outline: 1px solid red
+		list-style-type: none
+		margin: 0
+		padding: 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+
+			
+
+.right-box
+	flex: 1
+	height: 100%
+	overflow: hidden
+	img
+		transform: scale(1.1)
+		transition: ease-out 0.4s
+		&:hover
+			transform: scale(1.14)
+
+
+
+@keyframes buttonPulse
+	0% 
+		box-shadow: 0 0 4rem rgba($button_color, 0.4)
+	25%
+		box-shadow: 0 0 4rem rgba($button_color, 1)
+	50%
+		box-shadow: 0 0 4rem rgba($button_color, 1.4)
+	100%
+		box-shadow: 0 0 4rem rgba($button_color, 0.4)
+
+
+
+
+@media screen and (max-width: 1349px)
+	html, body
+		font-size: $fontSizeControl / 1.6
+		// font-size: $fontSizeControl / 5
+	
+	.container
+		margin-top: 2.4rem
+
+	.sponsors
+		img
+			width: 13rem
+
+
