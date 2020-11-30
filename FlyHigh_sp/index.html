@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FlyHight</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/hamburger.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<!--[if lt IE 7]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+	<div class="wrapper">
+		<div class="wrapper__bg">
+			<header class="header">
+				<div class="header__logo"><a href="#"><img src="img/logo.svg" alt="FlyHight" srcset=""></a></div>
+				<!-- <div class="header__hamburger">
+					<div id="nav-icon1" class="">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div> -->
+				<div class="header__menu_center">
+					<nav>
+						<ul>
+							<li><a href="#">Holiday Packages</a></li>
+							<li><a href="#">Flight Schedule</a></li>
+							<li><a href="#">Account Settings</a></li>
+							<li><a href="#">Manage Booking</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__menu__user-control">
+					<nav>
+						<ul>
+							<li><a href="#">Register</a></li>
+							<li class="header__menu__user-control_active"><a href="#">Sign In</a></li>
+							<li class="dropdown-btn"><a href="#">En &dtrif;</a>
+								<ul class="dropdown-btn_active">
+									<li><a href="#">Ru</a></li>
+									<li><a href="#">Esp</a></li>
+									<li><a href="#">Укр</a></li>
+									<li><a href="#">De</a></li>
+								</ul>
+
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+
+			<section class="content">
+				<div class="content_welcome-text">
+					<h2>Hey Buddy! Where are you<br><b>Flying</b> to?</h2>
+					<div class="welcome-text__explore-btn"><a href="#">Explore now</a></div>
+				</div>
+				<div class="content_tabs">
+					<div class="content__tabs__btn">
+						<button data-tab-btn="flight" class="active-tab-btn"><i class="fa fa-plane"></i>Flight</button>
+						<button data-tab-btn="hotel"><i class="fa fa-building-o"></i>Hotel</button>
+						<button data-tab-btn="car"><i class="fa fa-car"></i>Rent a Car</button>
+					</div>
+
+					<div class="content__tabs__tab active-tab" data-tab-content="flight">
+						<div class="tab__selects">
+							<label>
+								<select name="ticket" id="ticket">
+									<option value="1">Round Trip</option>
+									<option value="2">One way</option>
+								</select>
+							</label>
+
+							<label>
+								<select name="passengers" id="passengers">
+									<option value="1">01 passenger</option>
+									<option value="2">02 passengers</option>
+									<option value="3">03 passengers</option>
+									<option value="4">04 passengers</option>
+								</select>
+							</label>
+
+							<label>
+								<select name="class" id="class">
+									<option value="1">Econom</option>
+									<option value="2">Comfort</option>
+									<option value="3">Busines</option>
+									<option value="4">First class</option>
+								</select>
+							</label>
+						</div>
+						<div class="tab__inputs__dest">
+							<label>
+								From
+								<input type="text" id="from" name="from" value="Los Angeles">
+								<span>BHN, North America, USD</span>
+							</label>
+
+							<label>
+								To
+								<input type="text" id="to" name="to" value="New York">
+								<span>BHN, North America, USA</span>
+							</label>
+
+							<div class="tab__inputs__dest__date">
+								<label>
+									Departure
+									<input type="date" name="departure" id="departure">
+									<div class="date__controls">
+										<span>prev</span><span>next</span>
+									</div>
+								</label>
+
+								<label>
+									Return
+									<input type="date" name="departure" id="departure">
+									<div class="date__controls">
+										<span>prev</span><span>next</span>
+									</div>
+								</label>
+							</div>
+
+						</div>
+						<div class="tab__btns">
+							<button>Search Flight</button>
+							<a href="#">Explore All</a>
+						</div>
+
+
+
+
+					</div>
+					<div class="content__tabs__tab" data-tab-content="hotel">
+						<div class="tab__selects">
+							<label>
+								<select name="count_day" id="count_day">
+									<option value="1">1 day</option>
+									<option value="2">2 days</option>
+									<option value="3">3 days</option>
+									<option value="4">4 days</option>
+									<option value="5">5 days</option>
+									<option value="6">6 days</option>
+									<option value="7">7 days</option>
+								</select>
+							</label>
+
+							<label>
+								<select name="person" id="person">
+									<option value="1">01 person</option>
+									<option value="2">02 persons</option>
+									<option value="3">03 persons</option>
+									<option value="4">04 persons</option>
+								</select>
+							</label>
+
+							<label>
+								<select name="star" id="star">
+									<option value="1">&#9734;</option>
+									<option value="2">&#9734;&#9734;</option>
+									<option value="3">&#9734;&#9734;&#9734;</option>
+									<option value="4">&#9734;&#9734;&#9734;&#9734;</option>
+									<option value="4">&#9734;&#9734;&#9734;&#9734;&#9734;</option>
+								</select>
+							</label>
+						</div>
+						<div class="tab__inputs__dest hotels">
+							<label class="hotel_label">
+								Hotels
+								<input type="text" id="from" name="from" value="Hampton Inn & Suites">
+								<span>BHN, North America, USA</span>
+							</label>
+
+
+
+							<div class="tab__inputs__dest__date">
+								<label>
+									Departure
+									<input type="date" name="departure" id="departure">
+									<div class="date__controls">
+										<span>prev</span><span>next</span>
+									</div>
+								</label>
+
+								<label>
+									Return
+									<input type="date" name="departure" id="departure">
+									<div class="date__controls">
+										<span>prev</span><span>next</span>
+									</div>
+								</label>
+							</div>
+
+						</div>
+						<div class="tab__btns">
+							<button>Search Hotel</button>
+							<a href="#">Explore All</a>
+						</div>
+
+
+
+
+					</div>
+					<div class="content__tabs__tab" data-tab-content="car">
+						<div class="tab__selects">
+							<label>
+								<select name="count_day" id="count_day">
+									<option value="1">1 day</option>
+									<option value="2">2 days</option>
+									<option value="3">3 days</option>
+									<option value="4">4 days</option>
+									<option value="5">5 days</option>
+									<option value="6">6 days</option>
+									<option value="7">7 days</option>
+								</select>
+							</label>
+
+							<label>
+								<select name="fuel" id="fuel">
+									<option value="1">petrol</option>
+									<option value="2">diesel</option>
+									<option value="3">electro</option>
+									<option value="4">hybrid</option>
+								</select>
+							</label>
+
+							<label>
+								<select name="transmission" id="transmission">
+									<option value="1">manual</option>
+									<option value="1">automat</option>
+								</select>
+							</label>
+						</div>
+						<div class="tab__inputs__dest hotels">
+							<label class="hotel_label">
+								Model
+								<input type="text" id="from" name="from" value="Ford Raptor 2020">
+								<span>F-150 Raptor 3.5 AT (450 l/s) </span>
+							</label>
+
+
+
+							<div class="tab__inputs__dest__date">
+								<label>
+									Get In
+									<input type="date" name="departure" id="departure">
+									<div class="date__controls">
+										<span>prev</span><span>next</span>
+									</div>
+								</label>
+
+								<label>
+									Drop Off
+									<input type="date" name="departure" id="departure">
+									<div class="date__controls">
+										<span>prev</span><span>next</span>
+									</div>
+								</label>
+							</div>
+
+						</div>
+						<div class="tab__btns">
+							<button>Search Car</button>
+							<a href="#">Explore All</a>
+						</div>
+
+
+
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</div>
+
+
+	</div>
+
+	<script src="app.js"></script>
+	<script src="" async defer></script>
+</body>
+
+</html>
