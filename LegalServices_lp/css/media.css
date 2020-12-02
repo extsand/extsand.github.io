@@ -4,44 +4,11 @@
 	display: none;
 }
 
-@media screen and (max-width: 900px){
-	.news__inner{
-		flex-direction: column;
-    justify-content: center;
-    align-items: center
-	}
-	.news__slider{
-		margin-bottom: 90px;
 
-	}
-	.news__blog{
-		max-width: 100%;
-		/* display: flex; */
-		
-	}
-	.news__blog img{
-		 width: 100%;
-		
-	}
-	.news__blog-text{
-		padding-bottom:20px ;
-	}
-	.footer__inner{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.footer__map{
-		display: none;
-		order: -1;
-		margin-bottom: 20px;
-	}
-	.footer__info {
-		max-width: 100%;
-	}
-}
+
 
 @media (max-width: 900px){
+
 	.header__top{
 		text-align: center;
 	}
@@ -52,20 +19,22 @@
 	.header__btn:before{
 		display: none;
 	}
-}
-
-@media (max-width: 900px){
 	
 	.header__btn-menu{
 		display: block;
-		/* z-index: 3; */
+		/* z-index: 9999;/ */
+	}
+	.menu{
+		/* position: relative; */
 	}
 	.menu ul {
 		display: none;
 		position: absolute;
+
 		top: 170px;
+		width: 100%;
 		left: 0;
-		right: 0;
+		/* right: 0; */
 		z-index: 2;
 	}
 	.menu li {
@@ -85,7 +54,7 @@
 		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: center;
-		/* align-items: center; */
+
 	}
 	.services__btn,
 	.news__btn{
@@ -95,7 +64,7 @@
 	.services__items{
 		flex-direction: column;
 		align-items: center;
-		/* justify-content: center; */
+
 	}
 	.services__item{
 		max-width: 80%;
@@ -134,28 +103,97 @@
 		flex-direction: column;
 	
 	}
+	.news__inner{
+		flex-direction: column;
+    justify-content: center;
+    align-items: center
+	}
+	.news__slider{
+		margin-bottom: 90px;
+
+	}
+	.news__blog{
+		max-width: 100%;
+		/* display: flex; */
+		
+	}
+	.news__blog img{
+		 width: 100%;
+		
+	}
+	.news__blog-text{
+		padding-bottom:20px ;
+	}
+	.footer__inner{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer__map{
+		order: -1;
+		margin-bottom: 20px;
+	}
 	
+	.footer__info {
+		max-width: 100%;
+	}
 
+}
 
-
+@media (max-width: 650px){
+	.footer__map iframe{
+		width: 500px;
+	}
+}
+@media (max-width: 490px){
+	.footer__map iframe{
+		width: 380px;
+	}
 }
 
 @media (max-width: 400px){
+
 	.header__btn:before{
 		display: block;
 	}
-	.advantages-item{
+	/* .advantages-item{
 		padding: 30px 10px;
-	}
+	} */
 }
 
+@media (max-width: 360px){
+	.menu ul {
+		top: 220px;
+		
+	}
+
+	.services__item-title{
+		padding: 10px 5px;
+	}
+	.services__item-link{
+		display: none;
+	}
 
 
+	.advantages-item{
+		/* outline: 1px solid red; */
+		padding: 10px 0;
+		min-width: 300px;
+		max-width: 300px;
 
-
-
-
-
+		
+	}
+	.advantages__title{
+		max-width: 300px;
+	}
+	.advantages__text{
+		max-width: 300px;
+	}
+	.footer__map iframe{
+		width: 300px;
+	}
+	
+}
 
 
 @media (min-width: 900px){
