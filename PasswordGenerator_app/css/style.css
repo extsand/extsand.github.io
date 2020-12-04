@@ -149,9 +149,9 @@ html, body {
   font-weight: 600;
   color: #1A1B41;
   border-radius: 10px;
-  -webkit-transform: translateX(-150px);
-      -ms-transform: translateX(-150px);
-          transform: translateX(-150px);
+  -webkit-transform: translateX(-155px);
+      -ms-transform: translateX(-155px);
+          transform: translateX(-155px);
   -webkit-transition: all ease-in 0.5s;
   -o-transition: all ease-in 0.5s;
   transition: all ease-in 0.5s; }
