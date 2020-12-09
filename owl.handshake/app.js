@@ -9,10 +9,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
 	const btnJs = document.querySelector('.logo-img')
 	const overlayHello = document.querySelector('.overlay_hello')
 	const btnLang = document.querySelector('.button__click')
-	const audio = document.getElementById('sound')
+	const textMessage = document.querySelector('.text__message')
+
+	// touchstart
+	// touchend
+	// touchcancel
+	// touchmove
+
+
+	// textMessage.addEventListener('touchstart', () => {
+		
+	// })
 	
 
 
@@ -31,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		// btnLang.textContent = 'No! Learn Eng'
 
 	})
+
 
 
 
